@@ -5,7 +5,7 @@ import Languages from "./Languages";
 import { useLanguage, useNav } from "../contexts/ContextHooks";
 import navItems from "@/app/data/navItems";
 import Btn from "./Btn";
-import Theme from "./Theme";
+// import Theme from "./Theme";
 import Social from "./Social";
 
 const DesktopNav = () => {
@@ -29,7 +29,7 @@ const DesktopNav = () => {
           })}
         </ul>
       </nav>
-      <Theme />
+      {/* <Theme /> */}
       <Languages />
       <Social />
     </div>

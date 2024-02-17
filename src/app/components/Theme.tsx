@@ -21,8 +21,8 @@ const Theme = () => {
   };
 
   return (
-    <Btn>
-      <div className="theme-container">
+    <div className="theme-container">
+      <Btn>
         <div
           role="button"
           tabIndex={0}
@@ -46,8 +46,8 @@ const Theme = () => {
             <Icon icon="dark_mode" />
           </div>
         </div>
-      </div>
-    </Btn>
+      </Btn>
+    </div>
   );
 };
 

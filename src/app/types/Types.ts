@@ -6,6 +6,8 @@ export type ThemeType = "dark" | "light";
 
 export type NavType = boolean;
 
+export type ScrolledType = boolean;
+
 export type LanguageContextType = {
   language: LanguageType;
   // eslint-disable-next-line no-unused-vars
@@ -28,4 +30,10 @@ export type NavContextType = {
   navActive: NavType;
   // eslint-disable-next-line no-unused-vars
   setNavActive: (navActive: NavType) => void;
+};
+
+export type ScrolledContextType = {
+  scrolled: ScrolledType;
+  // eslint-disable-next-line no-unused-vars
+  setScrolled: (scrolled: ScrolledType) => void;
 };

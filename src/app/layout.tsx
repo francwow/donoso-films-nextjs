@@ -8,6 +8,7 @@ import Provider from "./components/Provider";
 import Header from "./components/Header";
 import CursorTwo from "./components/CursorTwo";
 import MobileNav from "./components/MobileNav";
+// import Theme from "./components/Theme";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const oswald = Oswald({ subsets: ["latin"], variable: "--font-oswald" });
@@ -41,7 +42,8 @@ export default function RootLayout({
           <MobileNav />
           <Cursor />
           <CursorTwo />
-          <main className="main">{children}</main>
+          {/* <Theme /> */}
+          {children}
         </body>
       </Provider>
     </html>

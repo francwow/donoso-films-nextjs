@@ -5,20 +5,22 @@ import Languages from "./Languages";
 import { useLanguage, useNav } from "../contexts/ContextHooks";
 import navItems from "@/app/data/navItems";
 import Btn from "./Btn";
-import Theme from "./Theme";
+// import Theme from "./Theme";
 import Social from "./Social";
-import Icon from "./GoogleIcon";
-import { useState } from "react";
+// import Icon from "./GoogleIcon";
+// import { useState } from "react";
+import Theme from "./Theme";
 
 const MobileNav = () => {
   const { navActive, setNavActive } = useNav();
   const { language } = useLanguage();
-  const [expanded, setExpanded] = useState(false);
+  // const [expanded, setExpanded] = useState(false);
 
   return (
     <div className={navActive ? "mobile-nav nav-active" : "mobile-nav"}>
+      <Theme />
+      <Social />
       <div className="nav-container">
-        <div></div>
         <nav className="main-nav">
           <ul className="nav-items">
             {navItems.map((item) => {
@@ -34,7 +36,7 @@ const MobileNav = () => {
             })}
           </ul>
         </nav>
-        <div className="mobile-nav-divider">
+        {/* <div className="mobile-nav-divider">
           {expanded ? (
             <div
               role="button"
@@ -64,8 +66,8 @@ const MobileNav = () => {
               <Icon icon="expand_more" />
             </div>
           )}
-        </div>
-        <div
+        </div> */}
+        {/* <div
           className={
             expanded ? "nav-secondary-items expanded" : "nav-secondary-items"
           }
@@ -73,7 +75,7 @@ const MobileNav = () => {
           <Theme />
           <Languages />
           <Social />
-        </div>
+        </div> */}
       </div>
     </div>
   );

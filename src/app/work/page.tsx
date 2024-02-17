@@ -1,3 +1,7 @@
 export default function Work() {
-  return <div className="main-content">work</div>;
+  return (
+    <main className="main">
+      <div className="main-content">work</div>
+    </main>
+  );
 }
