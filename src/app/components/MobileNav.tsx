@@ -9,7 +9,7 @@ import Btn from "./Btn";
 import Social from "./Social";
 // import Icon from "./GoogleIcon";
 // import { useState } from "react";
-import Theme from "./Theme";
+// import Theme from "./Theme";
 
 const MobileNav = () => {
   const { navActive, setNavActive } = useNav();
@@ -18,7 +18,7 @@ const MobileNav = () => {
 
   return (
     <div className={navActive ? "mobile-nav nav-active" : "mobile-nav"}>
-      <Theme />
+      {/* <Theme /> */}
       <Social />
       <div className="nav-container">
         <nav className="main-nav">
