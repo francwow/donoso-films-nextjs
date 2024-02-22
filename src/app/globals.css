@@ -625,9 +625,9 @@ body[data-theme="dark"] .main-btn-container a {
 /* <Theme /> */
 .theme-container {
   position: fixed;
-  top: 50%;
+  bottom: 1rem;
   left: 1rem;
-  transform: rotate(-90deg) translate3d(0, -70px, 0);
+  /* transform: rotate(-90deg) translate3d(0, -70px, 0); */
   border: 2px solid var(--theme-light-gray);
   background-color: var(--color-light-gray);
   width: fit-content;
