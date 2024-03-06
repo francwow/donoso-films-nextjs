@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Oswald } from "next/font/google";
+import { Antonio, Inter, Oswald } from "next/font/google";
 import localFont from "next/font/local";
 import React from "react";
 import "./globals.css";
@@ -12,6 +12,7 @@ import Theme from "./components/Theme";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const oswald = Oswald({ subsets: ["latin"], variable: "--font-oswald" });
+const antonio = Antonio({ subsets: ["latin"], variable: "--font-antonio" });
 
 const materialSymbols = localFont({
   variable: "--font-family-symbols", // Variable name (to reference after in CSS/styles)
@@ -36,12 +37,12 @@ export default function RootLayout({
       <Provider>
         <body
           data-theme="light"
-          className={`${inter.variable} ${oswald.variable}`}
+          className={`${inter.variable} ${oswald.variable} ${antonio.variable}`}
         >
-          <Header />
-          <MobileNav />
           <Cursor />
           <CursorTwo />
+          <Header />
+          <MobileNav />
           <Theme />
           {children}
         </body>

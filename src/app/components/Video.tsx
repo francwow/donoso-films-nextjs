@@ -13,6 +13,7 @@ const Video = ({ videoSrc, tag }: VideoProps) => {
             width={1920}
             height={1080}
             src={videoSrc}
+            preload="true"
             muted
             loop
             autoPlay

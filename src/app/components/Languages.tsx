@@ -7,8 +7,8 @@ const Languages = () => {
   const { language, setLanguage } = useLanguage();
 
   return (
-    <Btn>
-      <div className="languages-container">
+    <div className="languages-container">
+      <Btn>
         <div
           className={
             language === "ES" ? "languages es-active" : "languages en-active"
@@ -34,8 +34,8 @@ const Languages = () => {
             EN
           </div>
         </div>
-      </div>
-    </Btn>
+      </Btn>
+    </div>
   );
 };
 

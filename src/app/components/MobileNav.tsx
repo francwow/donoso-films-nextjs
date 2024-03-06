@@ -1,81 +1,85 @@
 "use client";
 
 import Link from "next/link";
-
-import { useLanguage, useNav } from "../contexts/ContextHooks";
-import navItems from "@/app/data/navItems";
+import { useLanguage, useNav, useSubNav } from "../contexts/ContextHooks";
+import { navItems, navSubItems } from "../data/navItems";
 import Btn from "./Btn";
-// import Theme from "./Theme";
 import Social from "./Social";
-// import Icon from "./GoogleIcon";
-// import { useState } from "react";
-// import Theme from "./Theme";
+import Icon from "./GoogleIcon";
+import Languages from "./Languages";
+import Theme from "./Theme";
 
 const MobileNav = () => {
   const { navActive, setNavActive } = useNav();
+  const { subNavActive, setSubNavActive } = useSubNav();
   const { language } = useLanguage();
-  // const [expanded, setExpanded] = useState(false);
 
   return (
     <div className={navActive ? "mobile-nav nav-active" : "mobile-nav"}>
-      {/* <Theme /> */}
       <Social />
+      <Languages />
+      <Theme />
       <div className="nav-container">
         <nav className="main-nav">
           <ul className="nav-items">
             {navItems.map((item) => {
               return (
                 <Btn key={item.id}>
-                  <Link onClick={() => setNavActive(false)} href={item.href}>
-                    <li className="nav-item">
-                      {language === "EN" ? item.textEN : item.textES}
-                    </li>
-                  </Link>
+                  {item.more ? (
+                    <button onClick={() => setSubNavActive(true)}>
+                      <li className="nav-item">
+                        {language === "EN" ? item.textEN : item.textES}
+                        <Icon icon="chevron_right" />
+                      </li>
+                    </button>
+                  ) : (
+                    <Link onClick={() => setNavActive(false)} href={item.href}>
+                      <li className="nav-item">
+                        {language === "EN" ? item.textEN : item.textES}
+                      </li>
+                    </Link>
+                  )}
                 </Btn>
               );
             })}
           </ul>
         </nav>
-        {/* <div className="mobile-nav-divider">
-          {expanded ? (
-            <div
-              role="button"
-              tabIndex={0}
-              onKeyDown={(e) => {
-                if (e.key === "Enter") {
-                  setExpanded(false);
-                }
-              }}
-              onClick={() => setExpanded(false)}
-              className="expand-btn"
-            >
-              <Icon icon="expand_less" />
-            </div>
-          ) : (
-            <div
-              role="button"
-              tabIndex={0}
-              onKeyDown={(e) => {
-                if (e.key === "Enter") {
-                  setExpanded(false);
-                }
-              }}
-              onClick={() => setExpanded(true)}
-              className="expand-btn"
-            >
-              <Icon icon="expand_more" />
-            </div>
-          )}
-        </div> */}
-        {/* <div
-          className={
-            expanded ? "nav-secondary-items expanded" : "nav-secondary-items"
-          }
+      </div>
+      <div
+        className={
+          subNavActive && navActive ? "secondary-nav active" : "secondary-nav"
+        }
+      >
+        <div
+          role="button"
+          tabIndex={0}
+          onKeyDown={(e) => {
+            if (e.key === "Enter") {
+              setSubNavActive(false);
+            }
+          }}
+          onClick={() => setSubNavActive(false)}
+          className="nav-item back"
         >
-          <Theme />
-          <Languages />
-          <Social />
-        </div> */}
+          <Btn>
+            <Icon icon="chevron_left" />
+            {language === "EN" ? "Back" : "Volver"}
+          </Btn>
+        </div>
+
+        <ul className={"secondary-nav-items"}>
+          {navSubItems.map((item) => {
+            return (
+              <Btn key={item.id}>
+                <Link onClick={() => setNavActive(false)} href={item.href}>
+                  <li className="nav-item">
+                    {language === "EN" ? item.textEN : item.textES}
+                  </li>
+                </Link>
+              </Btn>
+            );
+          })}
+        </ul>
       </div>
     </div>
   );

@@ -3,11 +3,12 @@
 import Nav from "./DesktopNav";
 import Logo from "./Logo";
 import Btn from "./Btn";
-import { useNav, useScrolled } from "../contexts/ContextHooks";
+import { useNav, useScrolled, useSubNav } from "../contexts/ContextHooks";
 import { useEffect, useRef } from "react";
 
 const Header = () => {
   const { navActive, setNavActive } = useNav();
+  const { setSubNavActive } = useSubNav();
   const { scrolled, setScrolled } = useScrolled();
   const headerRef = useRef<HTMLDivElement | null>(null);
 
@@ -17,7 +18,7 @@ const Header = () => {
 
     const scrollHandle = () => {
       const scrollY = window.scrollY;
-      if (noScroll < scrollY) {
+      if (noScroll < scrollY && scrollY > 200) {
         setScrolled(true);
       } else if (noScroll > scrollY) {
         setScrolled(false);
@@ -56,7 +57,7 @@ const Header = () => {
     >
       <div className="header">
         <Logo />
-        <div>
+        <div className="nav-wrapper">
           <Nav />
           <div className="burger-container">
             <Btn>
@@ -66,11 +67,13 @@ const Header = () => {
                 onKeyDown={(e) => {
                   if (e.key === "Enter") {
                     setNavActive(!navActive);
+                    setSubNavActive(false);
                     setScrolled(false);
                   }
                 }}
                 onClick={() => {
                   setNavActive(!navActive);
+                  setSubNavActive(false);
                   setScrolled(false);
                 }}
                 className="burger"

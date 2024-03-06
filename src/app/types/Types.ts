@@ -32,6 +32,12 @@ export type NavContextType = {
   setNavActive: (navActive: NavType) => void;
 };
 
+export type subNavContextType = {
+  subNavActive: NavType;
+  // eslint-disable-next-line no-unused-vars
+  setSubNavActive: (subNavActive: NavType) => void;
+};
+
 export type ScrolledContextType = {
   scrolled: ScrolledType;
   // eslint-disable-next-line no-unused-vars
