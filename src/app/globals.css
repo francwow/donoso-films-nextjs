@@ -960,7 +960,7 @@ body[data-theme="dark"] .dot-2::after {
   position: relative;
   background-color: var(--color-bg-main-btn);
   color: var(--color-white);
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   padding: 10px 20px;
   border-radius: 100vw;
   font-size: 1rem;
