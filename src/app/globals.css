@@ -129,9 +129,7 @@ section:not(.intro-reel, .production-section, .footer-section) {
 }
 
 i.symbol {
-  font-family: var(
-    --font-family-symbols
-  ); /* Variable declared in local font configuration */
+  font-family: var(--font-family-symbols);
   font-weight: normal;
   font-style: normal;
   font-size: 30px;
@@ -421,7 +419,8 @@ i.symbol {
 .expand-btn {
   padding: 10px;
 }
-*/ .mobile-nav .social-links-container .btn-container {
+
+.mobile-nav .social-links-container .btn-container {
   display: flex;
   justify-content: center;
   align-items: center;
