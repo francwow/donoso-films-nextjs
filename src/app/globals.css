@@ -373,6 +373,7 @@ i.symbol {
   position: absolute;
   bottom: 10px;
   left: 10px;
+  transform: rotate(0deg);
 }
 
 .mobile-nav .social-links-container {
@@ -757,19 +758,19 @@ body[data-theme="dark"] .prices-section {
 }
 
 .prices-heading h3 {
-  font-size: 2.3rem;
+  font-size: 2rem;
   font-weight: 600;
 }
 
 .prices-number {
-  font-size: 1.9rem;
+  font-size: 1.5rem;
 }
 
 .prices-info-item {
   display: flex;
   flex-direction: row;
   margin-bottom: 10px;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 .prices-info-item .symbol {
@@ -959,10 +960,10 @@ body[data-theme="dark"] .dot-2::after {
   position: relative;
   background-color: var(--color-bg-main-btn);
   color: var(--color-white);
-  font-size: 1rem;
+  font-size: 1.1rem;
   padding: 10px 20px;
   border-radius: 100vw;
-  font-size: 1.3rem;
+  font-size: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1396,6 +1397,34 @@ body[data-theme="dark"] .main-btn-container a {
     justify-content: space-around;
     z-index: 99;
     gap: 1rem;
+  }
+
+  .prices-heading h3 {
+    font-size: 2.3rem;
+    font-weight: 600;
+  }
+
+  .prices-number {
+    font-size: 1.9rem;
+  }
+
+  .prices-info-item {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+  }
+
+  .prices-info-item .symbol {
+    margin-right: 10px;
+    font-weight: 500;
+  }
+
+  .prices-info-item:nth-child(4) span {
+    margin-top: 1rem;
+    font-weight: 400;
+    font-size: 0.9rem;
+    line-height: 1.1;
   }
 
   .disclaimer {
