@@ -12,6 +12,7 @@ const About = () => {
 
   return (
     <section id="about" className="about-section">
+      <div className="about-overlay"></div>
       <div className="content-wrapper">
         <div className="about-info">
           {/* <div className="img-container">

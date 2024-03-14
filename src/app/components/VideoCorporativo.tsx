@@ -44,14 +44,14 @@ const workItems: WorkItems[] = [
     clientES: "Escape Room",
     imgSrc: img3.src,
   },
-  {
-    titleES: "Tutoriales(producto y/o servicio)",
-    titleEN: "Tutorials (product and/or service)",
-    link: "",
-    clientES: "Nikken instalación de productos",
-    clientEN: "Nikken product installation",
-    imgSrc: img4.src,
-  },
+  // {
+  //   titleES: "Tutoriales(producto y/o servicio)",
+  //   titleEN: "Tutorials (product and/or service)",
+  //   link: "",
+  //   clientES: "Nikken instalación de productos",
+  //   clientEN: "Nikken product installation",
+  //   imgSrc: img4.src,
+  // },
   {
     titleES: "Demostrativos(producto y/o servicio)",
     titleEN: "Demonstrative(product and/or service)",

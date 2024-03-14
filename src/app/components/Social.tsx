@@ -6,7 +6,7 @@ const Social = () => {
     <div className="social-links-container">
       <Btn>
         <div className="icon-container">
-          <Link target="_blank" href={"https://www.instagram.com/lo.design/"}>
+          <Link target="_blank" href={"https://www.instagram.com/donosofilms/"}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -20,7 +20,7 @@ const Social = () => {
         <div className="icon-container">
           <Link
             target="_blank"
-            href={"https://www.youtube.com/@lodesignsas8915"}
+            href={"https://youtube.com/@pike129?si=LgJsIdmIcTsXcp_X"}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"

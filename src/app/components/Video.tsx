@@ -1,3 +1,5 @@
+// import Icon from "./GoogleIcon";
+
 type VideoProps = {
   videoSrc: string;
   // type: string;
@@ -7,17 +9,24 @@ type VideoProps = {
 const Video = ({ videoSrc, tag }: VideoProps) => {
   return (
     <div className="video-container">
+      {/* <div className="mute">
+        <Icon icon="volume_off" />
+      </div> */}
       <div className="video">
         {tag === "video" ? (
+          // eslint-disable-next-line jsx-a11y/media-has-caption
           <video
             width={1920}
             height={1080}
             src={videoSrc}
             preload="true"
-            muted
+            muted={true}
             loop
+            playsInline
             autoPlay
-          ></video>
+          >
+            <source src={videoSrc} type="video/mov" />
+          </video>
         ) : (
           <iframe title="youtube-video" src={videoSrc} allowFullScreen />
         )}

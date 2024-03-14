@@ -1,8 +1,8 @@
 import Link from "next/link";
 import Btn from "./Btn";
 import Image from "next/image";
-import logoblack from "../../../public/img/logo-black-1.webp";
-import logowhite from "../../../public/img/logo-white-1.webp";
+import logoblack from "../../../public/img/logo-black.webp";
+import logowhite from "../../../public/img/logo-white.webp";
 import { useNav, useTheme } from "../contexts/ContextHooks";
 
 const Logo = () => {

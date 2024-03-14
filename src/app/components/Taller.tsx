@@ -8,7 +8,7 @@ const Taller = () => {
 
   return (
     <section id="taller" className="taller-section">
-      {/* <div className="taller-bg"></div> */}
+      <div className="taller-overlay"></div>
       <div className="content-wrapper">
         <div className="taller-info">
           <div className="taller-heading">
@@ -40,7 +40,7 @@ const Taller = () => {
             </p>
           </div>
           <div className="taller-text">
-            <p>{language === "ES" ? "Valor: 800.000" : "Price: 800.000"}</p>
+            <p>{language === "ES" ? "Valor: 1'000.000" : "Price: 1'000.000"}</p>
             <span>
               {language === "ES"
                 ? "*Pueden participar de 1 a 4 personas por taller con el mismo costo."

@@ -9,6 +9,7 @@ const Production = () => {
 
   return (
     <section id="production" className="production-section">
+      <div className="production-overlay"></div>
       <div className="content-wrapper">
         <div className="production-container">
           <div className="production-heading">
