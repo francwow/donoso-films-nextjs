@@ -898,12 +898,65 @@ body[data-theme="dark"] .prices-section {
   align-self: flex-start;
 }
 
+/* <Contact /> */
+.contact-section {
+  /* background-blend-mode: overlay;
+  background-attachment: fixed; */
+  color: var(--theme-color);
+  background-color: var(--theme-bg-color);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .contact-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 10;
+} */
+
+.contact-section .content-wrapper {
+  position: relative;
+  z-index: 99;
+}
+
+.contact-info {
+  max-width: 700px;
+  margin: auto;
+}
+
+.contact-info-item a {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0;
+}
+
+.contact-info h2 {
+  width: 100%;
+  text-align: start;
+  color: var(--theme-color);
+}
+
+.contact-info span {
+  text-align: justify;
+  font-size: 1.1rem;
+}
+
+.contact-info-item:hover span {
+  text-decoration: underline;
+}
+
 /* <Footer /> */
 .footer-section {
   width: 100%;
   height: 100%;
   padding: 2rem;
   background-color: var(--theme-bg-color);
+  border-top: 1px solid var(--theme-color);
 }
 
 .footer-grid {
@@ -1516,6 +1569,26 @@ body[data-theme="dark"] .main-btn-container a {
 
   .taller-info h2 {
     text-align: center;
+  }
+
+  /* <Contact /> */
+  .contact-info {
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    max-width: 800px;
+  }
+
+  .contact-info span {
+    font-size: 1.4rem;
+  }
+
+  .contact-info h2 {
+    text-align: start;
+  }
+
+  .contact-info-item .symbol {
+    font-size: 35px;
   }
 
   /* <Footer /> */

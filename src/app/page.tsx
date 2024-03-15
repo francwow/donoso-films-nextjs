@@ -7,6 +7,7 @@ import Prices from "./components/Prices";
 import Production from "./components/Production";
 import Taller from "./components/Taller";
 import VideoCorporativo from "./components/VideoCorporativo";
+import Contact from "./components/Contact";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
         <Production />
         <Prices />
         <Taller />
+        <Contact />
         <Footer />
       </div>
     </div>
