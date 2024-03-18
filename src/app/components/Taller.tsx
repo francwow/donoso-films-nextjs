@@ -21,7 +21,7 @@ const Taller = () => {
           <div className="taller-text">
             <p>
               {language === "ES"
-                ? "En Donoso Films también puedes aprender a hacer tus propios videos. En muchas ocasiones el contratar constantemente a una productora resulta costoso, es por ello que te ofrecemos un taller básico de realización de videos con celulares practico y eficaz."
+                ? "En Donoso Films también puedes aprender a hacer tus propios videos. En muchas ocasiones el contratar constantemente a una productora resulta costoso, es por ello que te ofrecemos un taller básico de realización de videos con celulares práctico y eficaz."
                 : "At Donoso Films you can also learn to make your own videos. In many cases, constantly hiring a production company is expensive, which is why we offer you a basic workshop on making videos with cell phones that is practical and effective."}
             </p>
           </div>

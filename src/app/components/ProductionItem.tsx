@@ -1,3 +1,6 @@
+"use client";
+
+import { useInView } from "react-intersection-observer";
 import Icon from "./GoogleIcon";
 
 type ProductionItemProps = {
@@ -19,16 +22,33 @@ const ProductionItem = ({
   position,
   icon,
 }: ProductionItemProps) => {
+  const { inView: containerInView, ref: containerRef } = useInView({
+    threshold: 0.5,
+    triggerOnce: true,
+  });
+
   return (
-    <div className={`production-item ${position}`}>
-      <div className="production-item-text">
+    <div ref={containerRef} className={`production-item ${position}`}>
+      <div
+        className={
+          containerInView
+            ? "production-item-text in-view"
+            : "production-item-text"
+        }
+      >
         <div className="production-item-heading">
           <h3>{language === "ES" ? h3ES : h3EN}</h3>
         </div>
         <p>{language === "ES" ? pES : pEN}</p>
       </div>
 
-      <div className="production-item-icon">
+      <div
+        className={
+          containerInView
+            ? "production-item-icon in-view"
+            : "production-item-icon"
+        }
+      >
         <Icon icon={icon} />
       </div>
     </div>

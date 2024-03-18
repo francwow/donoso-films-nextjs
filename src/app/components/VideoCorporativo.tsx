@@ -40,7 +40,7 @@ const workItems: WorkItems[] = [
   {
     titleES: "Evento",
     titleEN: "Event",
-    link: "https://youtu.be/GOLWfr5URF8",
+    link: "https://youtu.be/i5PPzj7FnWE?si=7CdDGPn-CCGpXivW",
     clientES: "Escape Room",
     imgSrc: img3.src,
   },
@@ -53,9 +53,9 @@ const workItems: WorkItems[] = [
   //   imgSrc: img4.src,
   // },
   {
-    titleES: "Demostrativos(producto y/o servicio)",
+    titleES: `Demostrativos(producto y/o servicio)`,
     titleEN: "Demonstrative(product and/or service)",
-    link: "https://youtu.be/BHHR59Mfrmg",
+    link: "https://youtu.be/cG69yqcIys4?si=mpTcXVR0WS8lfq1t",
     clientES: "Nikken productos",
     clientEN: "Nikken products",
     imgSrc: img4.src,

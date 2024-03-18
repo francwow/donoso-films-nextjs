@@ -727,14 +727,37 @@ i.symbol {
   align-items: center;
 }
 
+.production-item-text {
+  opacity: 0;
+  transform: translate3d(0, -10%, 0);
+  transition: 0.1s ease all;
+  flex-basis: 70%;
+}
+
 .production-item-text p {
   text-align: justify;
 }
 
 .production-item-icon .symbol {
   font-size: 10rem;
-  opacity: 0.4;
+  opacity: 0;
   transition: 0.3s ease all;
+}
+
+.production-item-text.in-view {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+  transition: 0.6s ease all;
+}
+
+/* .production-item-icon.in-view {
+  transform: translate3d(15%, 0, 0);
+  opacity: 1;
+} */
+
+.production-item-icon.in-view .symbol {
+  opacity: 0.8;
+  color: var(--color-blue);
 }
 
 /* <Prices /> */
@@ -1370,7 +1393,7 @@ body[data-theme="dark"] .main-btn-container a {
 
   .work-items {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, minmax(300px, 1fr));
     grid-template-rows: auto;
     position: relative;
     gap: 1rem;
@@ -1435,11 +1458,11 @@ body[data-theme="dark"] .main-btn-container a {
   }
 
   .work-item-text h3 {
-    font-size: 1.7rem;
+    font-size: calc(0.6rem + 1vw);
   }
 
   .work-item-text h4 {
-    font-size: 1.4rem;
+    font-size: calc(0.4rem + 1vw);
   }
 
   /* <Production /> */
@@ -1483,18 +1506,18 @@ body[data-theme="dark"] .main-btn-container a {
     font-size: 1.2rem;
   }
 
-  .production-item:hover .production-item-text {
+  .production-item-text.in-view {
     opacity: 1;
     transform: translate3d(0, 0, 0);
     transition: 0.6s ease all;
   }
 
-  .production-item:hover .production-item-icon {
+  .production-item-icon.in-view {
     transform: translate3d(15%, 0, 0);
     opacity: 1;
   }
 
-  .production-item:hover .symbol {
+  .production-item-icon.in-view .symbol {
     opacity: 0.8;
     color: var(--color-blue);
   }
@@ -1524,19 +1547,19 @@ body[data-theme="dark"] .main-btn-container a {
   }
 
   .prices-heading h3 {
-    font-size: 2.3rem;
+    /* font-size: 2.3rem; */
     font-weight: 600;
   }
 
   .prices-number {
-    font-size: 1.9rem;
+    /* font-size: 1.9rem; */
   }
 
   .prices-info-item {
     display: flex;
     flex-direction: row;
     margin-bottom: 10px;
-    font-size: 1.2rem;
+    /* font-size: 1.2rem; */
   }
 
   .prices-info-item .symbol {
@@ -1619,7 +1642,7 @@ body[data-theme="dark"] .main-btn-container a {
 
   /* <MainBtn /> */
   .main-btn-container a {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 
   /* <Theme /> */
