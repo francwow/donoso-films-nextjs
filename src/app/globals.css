@@ -1007,6 +1007,15 @@ body[data-theme="dark"] .prices-section {
   text-decoration: underline;
 }
 
+.contact-heading h3 {
+  font-family: var(--font-inter);
+  color: var(--color-gray);
+  font-weight: 300;
+  border-bottom: 1px solid var(--color-gray);
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
 /* <Footer /> */
 .footer-section {
   width: 100%;

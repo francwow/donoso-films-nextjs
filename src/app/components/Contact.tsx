@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useLanguage } from "../contexts/ContextHooks";
 import Icon from "./GoogleIcon";
+import Btn from "./Btn";
 
 const Contact = () => {
   const { language } = useLanguage();
@@ -16,24 +17,31 @@ const Contact = () => {
             <h2 className="section-header">
               {language === "ES" ? "CONTACTO" : "CONTACT"}
             </h2>
+            <h3>{language === "ES" ? "HABLEMOS" : "LET'S TALK"}</h3>
           </div>
           <div className="contact-info-item">
-            <Link href={""} target="_blank">
-              <Icon icon="location_on" />
-              <span>cra 4 # 34-28, Bogotá, Colombia</span>
-            </Link>
+            <Btn>
+              <Link href={""} target="_blank">
+                <Icon icon="location_on" />
+                <span>cra 4 # 34-28, Bogotá, Colombia</span>
+              </Link>
+            </Btn>
           </div>
           <div className="contact-info-item">
-            <Link href={""} target="_blank">
-              <Icon icon="call" />
-              <span>+57 315 7865114</span>
-            </Link>
+            <Btn>
+              <Link href={""} target="_blank">
+                <Icon icon="call" />
+                <span>+57 315 7865114</span>
+              </Link>
+            </Btn>
           </div>
           <div className="contact-info-item">
-            <Link href={""} target="_blank">
-              <Icon icon="mail" />
-              <span>comercialdonosofilms@gmail.com</span>
-            </Link>
+            <Btn>
+              <Link href={""} target="_blank">
+                <Icon icon="mail" />
+                <span>comercialdonosofilms@gmail.com</span>
+              </Link>
+            </Btn>
           </div>
         </div>
       </div>

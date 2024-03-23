@@ -50,7 +50,7 @@ const About = () => {
           <MainBtn
             btnTextEN="Let's work together"
             btnTextES="Trabajemos juntos"
-            href="/"
+            href="#contact"
             target={false}
           />
         </div>
