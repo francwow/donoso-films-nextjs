@@ -56,7 +56,7 @@ const Prices = () => {
         <div className="disclaimer">
           <p>
             {language === "ES"
-              ? "*Estos precios NO incluyen desplazamientos a locaciones fuera de Bogotá, así como hospedajes, ni alimentación o compra de elementos para producción. Tampoco incluyen IVA."
+              ? "*Estos precios NO incluyen desplazamientos a locaciones fuera de Bogotá, así como hospedajes, ni alimentación o compra de elementos para producción. No incluyen IVA."
               : `*Prices DO NOT include travel to locations outside Bogotá, as well as lodging, food or purchase of elements for production. IVA not included.`}
           </p>
         </div>

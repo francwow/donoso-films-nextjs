@@ -32,7 +32,7 @@ const Contact = () => {
           <div className="contact-info-item">
             <Link href={""} target="_blank">
               <Icon icon="mail" />
-              <span>contacto@donosofilms.com</span>
+              <span>comercialdonosofilms@gmail.com</span>
             </Link>
           </div>
         </div>

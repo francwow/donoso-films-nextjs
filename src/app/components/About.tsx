@@ -43,8 +43,8 @@ const About = () => {
 
             <p>
               {language === "ES"
-                ? "Por nuestros 25 años de oficio audiovisual nos consideramos expertos en la realización de videos corporativos para empresas, conceptos humanos y emprendimientos."
-                : "Due to our 25 years of audiovisual work, we consider ourselves experts in making corporate videos for companies, human concepts and ventures."}
+                ? "Por nuestros 10 años de oficio audiovisual nos consideramos expertos en la realización de videos corporativos para empresas, conceptos humanos y emprendimientos."
+                : "Due to our 10 years of audiovisual work, we consider ourselves experts in making corporate videos for companies, human concepts and ventures."}
             </p>
           </div>
           <MainBtn

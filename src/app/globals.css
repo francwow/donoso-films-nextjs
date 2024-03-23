@@ -450,6 +450,40 @@ i.symbol {
   overflow: hidden;
 }
 
+.reel-audio {
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  top: 5%;
+  right: 5%;
+  z-index: 99;
+}
+
+.audio-play,
+.audio-stop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: var(--color-dark);
+  visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.audio-play.active,
+.audio-stop.active {
+  visibility: visible;
+}
+
+.reel-audio .symbol {
+  color: white;
+  font-size: 1.5rem;
+}
+
 .reel-overlay {
   display: block;
   position: absolute;
@@ -1359,6 +1393,22 @@ body[data-theme="dark"] .main-btn-container a {
     color: white;
     font-size: 3rem;
     text-align: center;
+  }
+
+  .reel-audio {
+    width: 50px;
+    height: 50px;
+  }
+
+  .audio-play,
+  .audio-stop {
+    width: 50px;
+    height: 50px;
+  }
+
+  .reel-audio .symbol {
+    color: white;
+    font-size: 2rem;
   }
 
   /* <About /> */

@@ -1,7 +1,9 @@
+/* eslint-disable jsx-a11y/media-has-caption */
 "use client";
 
 import { useEffect, useState } from "react";
 import Video from "./Video";
+import Audio from "./Audio";
 
 const IntroReel = () => {
   const [translateY, setTranslateY] = useState(0);
@@ -26,18 +28,7 @@ const IntroReel = () => {
         className="reel-overlay"
       ></div>
       <div className="intro-video-wrapper">
-        {/* <div className="intro-video-copy">
-        <h1>
-          Somos una productora audiovisual que te acompaña de principio a
-          fin
-        </h1>
-        <MainBtn
-          btnTextEN="Trabajemos juntos"
-          btnTextES="Let's work together"
-          href="/"
-          target={false}
-        />
-      </div> */}
+        <Audio />
         <Video videoSrc="/video/reel.mov" tag="video" />
       </div>
     </section>
