@@ -376,26 +376,26 @@ i.symbol {
 .mobile-nav .theme-container {
   display: block;
   position: absolute;
-  bottom: 2rem;
+  bottom: 4rem;
   left: 2rem;
   transform: rotate(0deg);
 }
 
 .mobile-nav .social-links-container {
   position: absolute;
-  bottom: 2rem;
+  bottom: 4rem;
   right: 2rem;
 }
 
 .mobile-nav .languages-container {
   position: absolute;
-  top: 2rem;
+  top: 4rem;
   left: 2rem;
 }
 
 .mobile-nav .burger-container {
   position: absolute;
-  top: 2rem;
+  top: 4rem;
   right: 2rem;
 }
 
