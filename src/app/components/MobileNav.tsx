@@ -8,6 +8,7 @@ import Social from "./Social";
 import Icon from "./GoogleIcon";
 import Languages from "./Languages";
 import Theme from "./Theme";
+import BurgerBtn from "./BurgerBtn";
 
 const MobileNav = () => {
   const { navActive, setNavActive } = useNav();
@@ -19,6 +20,7 @@ const MobileNav = () => {
       <Social />
       <Languages />
       <Theme />
+      <BurgerBtn />
       <div className="nav-container">
         <nav className="main-nav">
           <ul className="nav-items">

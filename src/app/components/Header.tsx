@@ -3,13 +3,12 @@
 
 import Nav from "./DesktopNav";
 import Logo from "./Logo";
-import Btn from "./Btn";
-import { useNav, useScrolled, useSubNav } from "../contexts/ContextHooks";
+import { useNav, useScrolled } from "../contexts/ContextHooks";
 import { useEffect, useRef } from "react";
+import BurgerBtn from "./BurgerBtn";
 
 const Header = () => {
-  const { navActive, setNavActive } = useNav();
-  const { setSubNavActive } = useSubNav();
+  const { navActive } = useNav();
   const { scrolled, setScrolled } = useScrolled();
   const headerRef = useRef<HTMLDivElement | null>(null);
 
@@ -60,33 +59,7 @@ const Header = () => {
         <Logo />
         <div className="nav-wrapper">
           <Nav />
-          <div className="burger-container">
-            <Btn>
-              <div
-                role="button"
-                tabIndex={0}
-                onKeyDown={(e) => {
-                  if (e.key === "Enter") {
-                    setNavActive(!navActive);
-                    setSubNavActive(false);
-                    setScrolled(false);
-                  }
-                }}
-                onClick={() => {
-                  setNavActive(!navActive);
-                  setSubNavActive(false);
-                  setScrolled(false);
-                }}
-                className="burger"
-              >
-                <div
-                  className={
-                    navActive ? "burger-stick nav-active" : "burger-stick"
-                  }
-                ></div>
-              </div>
-            </Btn>
-          </div>
+          <BurgerBtn />
         </div>
       </div>
     </div>
